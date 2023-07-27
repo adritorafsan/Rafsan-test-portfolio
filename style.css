@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    color: white;
+    background: rgb(21, 21, 33);
+   
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    padding: 2rem 6rem;
+   backdrop-filter: blur(12px);
+   border-radius: 20px;
+   z-index: 99;
+}
+
+section{
+    min-height: 100vh;
+    padding: 1px 6rem;
+}
+.logo p{
+    font-size: 1.6em;
+    font-weight: 600;
+    cursor: none;
+}
+
+
+#menu{
+  display: none;
+font-size: 2.4rem;
+    
+}
+
+nav a{
+    padding-left: 40px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav a:hover,.active{
+    color: cyan;
+    transition: .3s;
+}
+
+
+.about{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about .about-text h3{
+    margin-bottom: -5px;
+    font-size: 1.5em;
+}
+
+.about .about-text h2{
+    margin-bottom: 2px;
+    font-size: 1.6em;
+}
+.about .about-text h2 span, .contact h2 span{
+    font-size: 1.7em;
+    margin-left: 10px;
+    color: cyan;
+    text-shadow: 0px 0px 4px cyan;
+}
+
+.about .about-text p{
+    line-height: 20px;
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+
+.about .about-text .social-links{
+    display: flex;
+    gap: 17px;
+    justify-content: start;
+    margin-top: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.about .about-text .social-links a{
+    font-size: 1.4em;
+    color: black;
+    background: cyan;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px cyan;
+    text-decoration: none;
+}
+.about .about-text .social-links a:hover{
+    color: cyan;
+    background: black;
+    transition: .4s ease;
+    font-size: 1.4em;
+}
+
+.btn{
+    margin-top: 13px;
+    height: 45px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: black;
+    background: cyan;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px cyan;
+}
+
+.btn:hover{
+    transition: .5s ease-in;
+    color: cyan;
+    background: black;
+}
+
+.about .about-img img{
+    height: 300px;
+    border-radius: 50px;
+   
+
+}
+
+
+.rafsan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-left: 10%;
+
+}
+
+.rafsan .rafsan-text{
+    width: 100%;
+}
+.rafsan .rafsan-text h1{
+   margin-bottom: -10px;
+   font-size: 2.6em;
+}
+.rafsan .rafsan-text h1 span{
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    margin-left: 6px;
+    text-shadow: 0px 0px 4px cyan;
+    color: cyan;
+ }
+
+
+ .rafsan .rafsan-text h3{
+    margin-bottom: 10px;
+    font-size: 1.4em;
+ }
+
+ .rafsan .rafsan-text p{
+    line-height: 30px;
+ }
+
+.rafsan .another-img img{
+    height: 500px;
+    border-radius: 50px;
+}
+
+.services{
+    padding:9% 6rem;
+}
+.services h2{
+    margin-bottom: 50px;
+    margin-left: 50%;
+    font-size: 3em;
+}
+.services h2 span,.projects h2 span{
+    color: cyan;
+}
+
+.services-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.services-con .services-box{
+   flex: 1 1 20rem;
+   background: rgb(29, 29, 44);
+   padding: 3rem 2rem 4rem;
+   border-radius: 2rem;
+   text-align: center;
+   border: .2rem solid rgb(29, 29, 44);
+   box-shadow: 1px 1px 15px cyan;
+   transition: .5s ease-out;
+}
+
+.services-con .services-box:hover{
+    border: .2rem solid cyan;
+    transform: scale(1.02);
+}
+.services-con .services-box .services-icon{
+    font-size: 3em;
+    color: cyan;
+}
+
+.services-con .services-box h3{
+    font-size: 1.4em;
+}
+.services-con .services-box p{
+    margin-top: 12px;
+    font-size: 1.1em;
+
+}
+
+.services-con .services-box .btn{
+    font-size: 1.1em;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.projects{
+    position: relative;
+    height: 100vh;
+}
+
+.project-box{
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    justify-content: center;
+    align-items: center;
+    /* margin-left:10%; */
+}
+.projects{
+margin-left: 12%;
+}
+
+.projects h2{
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+    font-size: 3.4em;
+}
+.project-box .projects-project{
+    position: relative;
+    overflow: hidden;
+}
+
+.project-box .projects-project img{
+    width: 76%;
+    border-radius: 20px;
+    height: 76%;
+    border: 2px solid cyan;
+    box-shadow: 1px 1px 15px cyan;
+    transition: .5s;
+}
+
+
+
+.project-box .projects-project .projects-text{
+    position: absolute;
+    top: 1%;
+    width: 76%;
+    text-align: center;
+    /* margin-left: 10%; */
+    z-index: 1;
+    border-radius: 2rem;
+    height: 96%;
+    background: linear-gradient(rgba(0,0,0,.5),rgb(24, 131, 131));
+    transform: translateY(330px);
+}
+
+.project-box .projects-project img:hover .projects-text{
+    transform: translateY(0);
+}
+ 
+
+
+.project-box .projects-project .projects-text p{
+    margin-top: 22%;
+    width: 60%;
+    text-align: center;
+    margin-left: 17%;
+    font-size: 1.3em;
+}
+
+.project-box .projects-project .projects-text a .bx{
+    font-size: 2em;
+  
+    
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact h2{
+    margin-bottom: 2rem;
+    font-size: 2.5em;
+}
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input, .contact form textarea{
+    width: 100%;
+    padding: .7rem;
+    font-size: 1.2rem;
+    color: white;
+    background: rgb(7, 8, 23);
+    margin: .7rem 0;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.contact form .input-box input{
+    width: 49%;
+    
+}
+
+.contact form ::placeholder{
+    color: white;
+    font-size: .7em;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+
+.contact form .btn{
+    margin: auto;
+    width: 160px;
+    height: 50px;
+    font-size: 1.2em;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    padding: 10px 30%;
+    align-items: center;
+     background: rgb(19, 19, 28);
+}
+
+.footer .footer-text{
+    text-align: center;
+}
+
+.footer .footer-icon i{
+    border: 2px solid cyan;
+    height: 50px;
+    width: 50px;
+    padding-top: 10%;
+    color: cyan;
+    font-size: 2.4rem;
+    border-radius: 50%;
+
+}
+
+.footer .footer-icon i:hover{
+    background:cyan;
+    color: black;
+    transition: .5s ease-in;
+}
+
