@@ -21,6 +21,7 @@ header{
     padding: 2rem 6rem;
    backdrop-filter: blur(12px);
    border-radius: 20px;
+   margin-top: 0;
    z-index: 99;
 }
 
@@ -36,10 +37,10 @@ section{
 
 
 #menu{
-  display: none;
-font-size: 2.4rem;
-    
+    font-size: 2.5em;
+    display: none;
 }
+
 
 nav a{
     padding-left: 40px;
@@ -259,64 +260,85 @@ nav a:hover,.active{
     align-items: center;
     /* margin-left:10%; */
 }
-.projects{
-margin-left: 12%;
-}
+
 
 .projects h2{
     text-align: center;
+    font-size: 4.5em;
     margin-bottom: 3rem;
-    margin-top: 5rem;
-    font-size: 3.4em;
-}
-.project-box .projects-project{
-    position: relative;
-    overflow: hidden;
 }
 
-.project-box .projects-project img{
-    width: 76%;
-    border-radius: 20px;
-    height: 76%;
-    border: 2px solid cyan;
-    box-shadow: 1px 1px 15px cyan;
+.projects-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    align-items: center;
+    gap: 2.5rem;
+
+}
+
+.projects-container .projects-box{
+   display: flex;
+   box-shadow: 2px 0px 10px cyan;
+   position: relative;
+   border-radius: 20px;
+   overflow: hidden;
+}
+
+.projects-container .projects-box img{
+    width: 100%;
+}
+.projects-container .projects-box img:hover{
+    width: 103%;
     transition: .5s;
 }
 
-
-
-.project-box .projects-project .projects-text{
-    position: absolute;
-    top: 1%;
-    width: 76%;
-    text-align: center;
-    /* margin-left: 10%; */
-    z-index: 1;
-    border-radius: 2rem;
-    height: 96%;
-    background: linear-gradient(rgba(0,0,0,.5),rgb(24, 131, 131));
-    transform: translateY(330px);
-}
-
-.project-box .projects-project img:hover .projects-text{
+.projects-container .projects-box:hover .projects-layer {
     transform: translateY(0);
-}
- 
+    transition: transform .7s;
+} 
 
-
-.project-box .projects-project .projects-text p{
-    margin-top: 22%;
-    width: 60%;
+.projects-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(20, 149, 149));
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-left: 17%;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(300px);
+    border-radius: 20px;
+}
+
+.projects-layer h3{
+    color: cyan;
+    font-size: 2.1em;
+}
+.projects-layer  p{
+    width: 90%;
+}
+.projects-layer a i{
+    height: 45px;
+    padding-top: 23%;
+    width: 45px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid cyan;
+    color: white;
     font-size: 1.3em;
 }
 
-.project-box .projects-project .projects-text a .bx{
-    font-size: 2em;
-  
-    
+.projects-layer a i:hover{
+    background: black;
+    transition: .5s ease;
+    color: cyan;
 }
+
+
 
 .contact{
     display: flex;
@@ -411,6 +433,27 @@ margin-left: 12%;
 
 /* Making Responsive */
 
+@media(max-width:1324px) {
+    .about .about-text p{
+        width: 100%;
+        line-height: 25px;
+        font-size: 1.2em;
+    }
+    .rafsan{
+        margin-left: 0;
+
+    }
+    .rafsan .rafsan-text p{
+        width: 100%;
+        line-height: 25px;
+        font-size: .7em;
+    }
+    .projects-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+}
+
 @media (max-width:1002px){
     .about{
         margin-top: 3%;
@@ -441,4 +484,30 @@ margin-left: 12%;
 .footer .footer-text{
     font-size: .6em;
 }
+}
+
+@media (max-width:858px){
+    #menu{
+        display: block;
+    }
+    header nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgb(10, 10, 16);
+        display: none;
+        
+    }
+
+    header nav.active{
+        display: block;
+        transition: .5s;
+    }
+
+    header nav a{
+        display: block;
+        font-size: 1.3rem;
+        margin: 3rem 0;
+    }
 }

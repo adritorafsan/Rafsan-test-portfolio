@@ -15,6 +15,8 @@ window.onscroll = ()=>{
             })
         }
     })
+    menu.classList.remove('bx-x');
+    nav.classList.remove('active');
 }
 
 
@@ -27,4 +29,13 @@ const typed = new Typed('.multi-text',{
     loop:true
 
 })
+
+const menu = document.querySelector('#menu');
+const nav = document.querySelector('nav');
+
+
+menu.onclick= ()=>{
+    menu.classList.toggle('bx-x');
+    nav.classList.toggle('active');
+}
 
