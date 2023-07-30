@@ -510,4 +510,60 @@ nav a:hover,.active{
         font-size: 1.3rem;
         margin: 3rem 0;
     }
+    header{
+        padding-left: 2rem;
+       padding-top: 0;
+    }
+
+    section{
+        padding: 1px 2rem;
+       
+    }
+
+    .about .about-text h2{
+        font-size: 1.2em;
+    }
+    .about .about-text h2 span{
+        font-size: .7em;
+    }
+
+    .about{
+        flex-direction: column-reverse;
+         padding-top: 20%; 
+    }
+    .about-img img, .rafsan .another-img{
+        width: 350px;
+    }
+    .rafsan{
+        flex-direction: column;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rafsan .rafsan-text{
+        width: 90%;
+    }
+    
+    
+    
+
+}
+
+@media (max-width:658px){
+    .projects{
+        height: 100%;
+    }
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 80%;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
 }
