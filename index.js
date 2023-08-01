@@ -39,3 +39,14 @@ menu.onclick= ()=>{
     nav.classList.toggle('active');
 }
 
+ScrollReveal({
+    reset: true,
+    duration:2000,
+    delay:200,
+    distance:'80px'
+ });
+
+ScrollReveal().reveal('.about-text ,.rafsan-text , #home', { origin:'top'});
+
+ScrollReveal().reveal('.services-con , .projects-container', { origin:'left'});
+ScrollReveal().reveal('.contact form', { origin:'right'});
