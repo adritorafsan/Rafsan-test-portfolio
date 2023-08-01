@@ -146,10 +146,16 @@ nav a:hover,.active{
 .about .about-img img{
     height: 300px;
     border-radius: 50px;
-   
+   animation: animate 2s linear infinite;
 
 }
 
+@keyframes animate {
+    0%{transform: translateY(0);
+    transition: transfrom .3s;}
+    50%{transform: translateY(16px);transition: transfrom .3s;}
+    100%{transform: translateY(0);transition: transfrom .3s;}
+}
 
 .rafsan{
     display: flex;
@@ -189,6 +195,7 @@ nav a:hover,.active{
 .rafsan .another-img img{
     height: 500px;
     border-radius: 50px;
+    animation: animate 2s linear infinite;
 }
 
 .services{
